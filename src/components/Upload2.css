@@ -1,0 +1,16 @@
+.card-body{
+    height: 618px;
+    text-align: center;
+    width: 600px;
+    align-self: center;
+    
+}
+.card-text{
+    padding: 30px;
+}
+.file{
+    height: 180px;
+}
+.Progbar{
+    padding: 15px;
+}
