@@ -95,7 +95,7 @@ class FileUploadComponent extends Component {
                     <h5 class="card-title">File Uploader</h5>
                     <p class="card-text">Simple multi-part system to upload CSV Files</p>
                     <div class="mb-3">
-                      <label for="formFile" class="form-label">Default file input example</label>
+                    
                       <input class="form-control" type="file" id="formFile" onChange={this.selectFileHandler} />
                     </div>
                       <a href="#" class="btn btn-outline-dark" onClick={this.uploadHandler}>Upload</a>

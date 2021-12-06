@@ -15,6 +15,7 @@ function LoginForm({Login,error}){
 				<form class="login" onSubmit={submitHandler}>
                 <div class="form">
 						<img className="logoImg" src={logo}/>
+                        {(error != "")?(<div className="error">{error}</div>):""}
 						<input type="text" class="login__input" placeholder="User name / Email" onChange={e=>setDetails({...details,email:e.target.value})} value={details.email}/>
 						<input type="password" class="login__input" placeholder="Password" onChange={e=>setDetails({...details,password:e.target.value})} value={details.password}/>
 						<button type="submit" value="Login">Login</button>
