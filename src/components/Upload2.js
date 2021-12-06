@@ -3,6 +3,7 @@ import axios from 'axios';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import "./Upload2.css"
 import cloud from "./../cloud.jpg";
+import 'bootstrap/dist/css/bootstrap.min.css';
 class FileUploadComponent extends Component {
     state = {
             selectedFile:null,
@@ -20,10 +21,9 @@ class FileUploadComponent extends Component {
        
        this.setState({selectedFile: event.target.files[0],
       progress:0},function(){
-         console.log("selectedFile:",this.state.selectedFile);});
-       
-       
+         console.log("selectedFile:",this.state.selectedFile);}); 
     };
+
     // method contain logic to upload file
     uploadHandler = () => {
         console.log("inside uploadHnadler...");
@@ -31,7 +31,7 @@ class FileUploadComponent extends Component {
         const formData = new FormData();
         formData.append('file', this.state.selectedFile);
         console.log("formdata:",formData);
-        axios.post("https://localhost:5001/s3/AddFile?bucketName=upload-demo-2", formData, {
+        axios.post("https://localhost:5001/s3/AddFile?bucketName=phynduploads", formData, {
       onUploadProgress: progressEvent => {
         console.log("progress:",this.state.progress);
         this.setState({
@@ -57,8 +57,8 @@ class FileUploadComponent extends Component {
       if(this.state.selectedFile!=null){
         console.log("pass");
       return(
-        <div>
-          <h2>File Details</h2>
+        <div className="uploadStatus">
+          <h5>File Details</h5>
           <p>File Name:{this.state.selectedFile.name}</p>
           <p>File Type:{this.state.selectedFile.type}</p>
           <p>File Last Modified:{this.state.selectedFile.lastModifiedDate.toDateString()}</p>
@@ -78,40 +78,36 @@ class FileUploadComponent extends Component {
       else{console.log("fail");
         return(
           <div>
-            <h2>Select a file first...</h2>
+            <h5>Select a file ...</h5>
           </div>
         );
       }
     }
     render() {
         return (
-
-          
             <div className="uploadContainer" >
-
-
-            <div class="card text-center">
-              <div class="card-header">
-                Upload your file
-              </div>
-              
-              <div class="card-body" >
-                <img src={cloud} className="file" alt="Italian Trulli"/>
-                <h5 class="card-title">File Uploader</h5>
-                <p class="card-text">Simple multi-part system to upload CSV Files</p>
-                <div class="mb-3">
-  <label for="formFile" class="form-label">Default file input example</label>
-  <input class="form-control" type="file" id="formFile" onChange={this.selectFileHandler} />
-</div>
-                <a href="#" class="btn btn-outline-dark" onClick={this.uploadHandler}>Upload</a>
-                <div className="Progbar"><ProgressBar animated now={this.state.progress} /></div>
-              </div>
-              
-              <div class="card-footer text-muted">
-                Phynd Uploader
-              </div>
+              <div class="card text-center">
+                <div class="card-header">
+                  Upload your file
+                </div>
+                  <div class="card-body" >
+                    <img src={cloud} className="file" alt="Italian Trulli"/>
+                    <h5 class="card-title">File Uploader</h5>
+                    <p class="card-text">Simple multi-part system to upload CSV Files</p>
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Default file input example</label>
+                      <input class="form-control" type="file" id="formFile" onChange={this.selectFileHandler} />
+                    </div>
+                      <a href="#" class="btn btn-outline-dark" onClick={this.uploadHandler}>Upload</a>
+                    <div className="Progbar"><ProgressBar animated now={this.state.progress} />
+                    </div>
+                    {this.fileData()}
+                  </div>
+                  <div class="card-footer text-muted">
+                      Phynd Uploader
+                  </div>
+              </div> 
             </div>
-            </div> 
 );
     }
 }

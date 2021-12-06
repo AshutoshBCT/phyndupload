@@ -4,7 +4,7 @@ import LoginForm from './components/LoginForm';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Upload2 from './components/Upload2';
-import color from "./color.jpg";
+import logoo from "./components/Logo.png";
 
 
 function App() {
@@ -34,9 +34,10 @@ function App() {
         <div>
           <div>
             <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
+              <div className="navLogo-container">
+                <img src={logoo} className="navLogo" alt="Italian Trulli"/>
+              </div>
+          
             <a href="#about" onClick={Logout}>Logout</a>
             </div>
           </div>
