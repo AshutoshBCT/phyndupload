@@ -5,7 +5,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Upload2 from './components/Upload2';
 import logoo from "./components/Logo.png";
-
+import Home from './components/Home';
 
 function App() {
   const adminUser={
@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div >
+      {/* <Home/> */}
       {(user.email!="")?(
         <div>
           <div>
@@ -41,7 +42,8 @@ function App() {
             <a href="#about" onClick={Logout}>Logout</a>
             </div>
           </div>
-          <Upload2/>
+          {/* <Upload2/> */}
+          <Home/>
         </div>
       ):(
         <LoginForm Login={Login} error={error}/>

@@ -1,0 +1,12 @@
+.card-group{
+    width: 900px;
+    margin: auto;
+    margin-top: 40px;
+    /* padding: 1rem; */
+    /* margin-right: 1rem; */
+}
+.img-bucket{
+    height: 75%;
+    width: 75%;
+    padding-left: 70px;
+}
