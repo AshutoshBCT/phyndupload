@@ -6,6 +6,7 @@ function CreateBucket() {
     
     const [bucketName, setBucketName] = useState(null);
     const [apiResponse, setApiResponse] = useState(null);
+    const [inputError, setInputError] = useState(null);
 
     const createHandler = (e) =>{
         console.log("inside createhandler");
@@ -40,6 +41,15 @@ function CreateBucket() {
 
     }
 
+    const checkValidation = () =>{
+        if(bucketName=='' || bucketName==null){
+            setInputError("Bucket Name is Required!!!")
+        }
+        else{
+            createHandler()
+        }
+    }
+
     return (
         <div>
              <Card style={{ width: '18rem' }}>
@@ -53,14 +63,18 @@ function CreateBucket() {
                                 aria-label="Recipient's username"
                                 aria-describedby="basic-addon2"
                                 id="inputField" type="text"  name="bucketName" onChange={(event)=>{setBucketName(event.target.value)
-                                console.log(bucketName);}}
+                                console.log(bucketName);
+                                setApiResponse('')
+                                    }}
                                 required
                                 />
-                                <Button variant="outline-success" id="button-addon2" onClick={createHandler}>
+                                <Button variant="outline-success" id="button-addon2" onClick={checkValidation}>
                                 Create
                                 </Button>
                             </InputGroup>
-                            <div><span style={{ color: "red"}}>{apiResponse}</span></div>
+                            {/* <div><span style={{ color: "red"}}>{apiResponse}</span></div>
+                            <div><span style={{ color: "red"}}>{inputError}</span></div> */}
+                            <div><span style={{ color: "red"}}>{bucketName?apiResponse:inputError}</span></div>
                             </Card.Text>
                             
                         </Card.Body>

@@ -75,6 +75,7 @@ const Home =()=> {
                     centered
                     backdrop="static"
                     keyboard={false}
+                    // style={{maxWidth:"130%"}}
                 >
                     <Modal.Header closeButton>
                         {/* <Modal.Title>
