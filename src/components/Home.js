@@ -1,7 +1,8 @@
 import React, { Component, useState } from 'react'
 import{Card, Button, CardGroup, Modal} from 'react-bootstrap'
-import Cloud from "./../cloud.jpg"
-import Bucket from "./image/s3bucketLogo.png"
+//import Cloud from "./../cloud.jpg"
+import Bucket from "./image/s3bucketLogo4.png"
+import Cloud from "./image/greencloud.png"
 import './Home.css'
 import Upload from './Upload2'
 import CreateBucket from './CreateBucket'
@@ -22,26 +23,38 @@ const Home =()=> {
 
                 <CardGroup className='card-group'>
 
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem' }} className="creatCard">
+                        <div class="card-header">
+                            Create Bucket
+                        </div>    
                         <Card.Img variant="top" src={Bucket} className="img-bucket"/>
-                        <Card.Body>
-                            <Card.Title>File Uploader</Card.Title>
-                            <Card.Text>
-                            Simple multi-part system to upload CSV Files
+                        <Card.Body className="cardBody">
+                            <h5>AWS S3 Bucket</h5>
+                            <Card.Text className="text-create">
+                            Select your configured AWS S3 Bucket to further upload your file on it
                             </Card.Text>
-                            <Button variant="primary" onClick={handleShow2}>Create Bucket</Button>
+                            <Button variant="primary" onClick={handleShow2} className="button-create" >Create Bucket</Button>
                         </Card.Body>
+                        <div class="card-footer text-muted">
+                            .
+                         </div>             
                     </Card>
 
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Cloud} />
-                        <Card.Body>
-                            <Card.Title>File Uploader</Card.Title>
-                            <Card.Text>
-                            Simple multi-part system to upload CSV Files
+                    <Card style={{ width: '18rem' }} className="uploadCard">
+                        <div class="card-header">
+                            Upload File
+                        </div>  
+                        <Card.Img variant="top" src={Cloud} className="img-cloud" />
+                        <Card.Body className="cardBody">
+                            <h5>File Uploader</h5>
+                            <Card.Text className="text-create">
+                            Simple multi-part system to upload CSV Files on you added AWS S3 bucket
                             </Card.Text>
-                            <Button variant="primary" onClick={handleShow} >Uploader</Button>
+                            <Button variant="primary" onClick={handleShow} className="button-create" >Uploader</Button>
                         </Card.Body>
+                        <div class="card-footer text-muted">
+                            .
+                        </div> 
                     </Card>
 
                 </CardGroup>
