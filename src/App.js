@@ -21,8 +21,16 @@ function App() {
       setUser({
         email:details.email
       });
-    }else{
-      setError("Details do not match")
+    }else if(details.email!="" && details.password!=""){
+      if(details.email!=adminUser.email){
+        setError("Email does not match");
+      }
+      else{
+        setError("Password does not match");
+      }
+    }
+    else{
+      setError("Fields cannot be empty");
     }
   }
   const Logout=()=>{
