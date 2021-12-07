@@ -22,10 +22,12 @@ function App() {
         email:details.email
       });
     }else{
+      setError("Details do not match")
     }
   }
   const Logout=()=>{
     setUser({email:""});
+    setError("");
   }
 
   return (
@@ -38,7 +40,7 @@ function App() {
               <div className="navLogo-container">
                 <img src={logoo} className="navLogo" alt="Italian Trulli"/>
               </div>
-          
+
             <a href="#about" onClick={Logout}>Logout</a>
             </div>
           </div>

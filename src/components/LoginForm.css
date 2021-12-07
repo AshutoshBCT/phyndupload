@@ -108,3 +108,15 @@ body {
 	height:60px;
 	object-fit:cover;
 }
+.error{
+  border-style: dashed;
+  border-width: 1px;
+  border-radius: 5px;
+  height: 30px;
+  width: 270px;
+  margin-bottom: 12px;
+  margin-top: 14px;
+  color: #b20000;
+  font-size: 15px;
+  padding: 3px;
+}
