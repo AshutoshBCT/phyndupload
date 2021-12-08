@@ -50,7 +50,7 @@ const Home =()=> {
                             <Card.Text className="text-create">
                             Simple multi-part system to upload CSV Files on you added AWS S3 bucket
                             </Card.Text>
-                            <Button variant="primary" onClick={handleShow} className="button-create" >Uploader</Button>
+                            <Button variant="primary" onClick={handleShow} className="button-create" >Upload File</Button>
                         </Card.Body>
                         <div class="card-footer text-muted">
                             .
@@ -76,7 +76,7 @@ const Home =()=> {
                     </Modal.Body>
                     <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>
-                                Close Button
+                                Close
                             </Button>
                     </Modal.Footer>
                 </Modal>
@@ -100,7 +100,7 @@ const Home =()=> {
                     </Modal.Body>
                     <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose2}>
-                                Close Button
+                                Close
                             </Button>
                     </Modal.Footer>
                 </Modal>

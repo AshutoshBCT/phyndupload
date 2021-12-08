@@ -114,13 +114,13 @@ class FileUploadComponent extends Component {
 
       }
       
-      else{console.log("fail");
-        return(
-          <div>
-            <h5>Select a file ...</h5>
-          </div>
-        );
-      }
+      // else{console.log("fail");
+      //   return(
+      //     <div>
+      //       <h5>Select a file ...</h5>
+      //     </div>
+      //   );
+      // }
     }
 
     handleChange= (e)=> {  
