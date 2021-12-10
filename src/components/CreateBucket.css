@@ -1,0 +1,19 @@
+.create-image{
+    height: 300px;
+    width: 300px;
+    align-self: center;
+}
+.create-main-div{
+    width: 580px;
+    height: 470px;
+    margin-bottom: 35px;
+    border-radius: 30px;
+}
+.create-title{
+    background-color: #989898;
+    height: 30px;
+    align-content: center;
+    color: white;
+    padding: 2px;
+    width: 820;
+}

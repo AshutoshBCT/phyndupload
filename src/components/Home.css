@@ -1,5 +1,5 @@
 .card-group{
-    width: 900px;
+    width: 800px;
     margin: auto;
     margin-top: 40px;
     /* padding: 1rem; */
@@ -10,18 +10,20 @@
     /* border-radius: 30px; */
 }
 .img-bucket{
-    height: 45%;
-    width: 85%;
+    height: 40%;
+    width: 80%;
     padding-left: 20px;
     margin-left: 24px;
     margin-top: 10px;
+    opacity: 0.9;
 }
 .img-cloud{
-    height: 42%;
+    height: 40%;
     width: 78%;
     padding-left: 60px;
-    margin-left: 20px; 
-    margin-top: 27px; 
+    margin-left: 7px; 
+    margin-top: 5px; 
+    opacity: 0.7;
 }
 .card-group>.creatCard{
     margin-right: 30px;
@@ -37,22 +39,49 @@
 }
 .cardBody{
     text-align: center;
-    font-size: 14px;
+    font-size: 7px;
+    margin-top: 12px;
     border-color: #AFE1AF;
     border-width: 2px;
     border-style:solid;
     border-radius: 15px;
-    margin-bottom: 20px;
-    width: 380px;
+    margin-bottom: 15px;
+    width: 320px;
     height: 130px;
 }
 .button-create{
-    width: 220px;
+    width: 200px;
     background-color: #2eaa2e;
     border-color: #2eaa2e;
     
 }
 .text-create{
     padding: 10px;
-    font-size: 13px;
+    font-size: 12px;
+}
+.CreateBucket-modal{
+    width: 685px;
+    height: 750px;
+    align-self: center;
+    margin-left: 419px;
+    border-radius: 30px;
+    
+}
+.footerr{
+    text-align: center;
+    align-content: center;
+    height: 50px;
+}
+.headerr{
+    height: 50px;
+}
+.create-modal-body{
+    background: #5188e0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+    background: -moz-linear-gradient(right, #5188e0, #8DC26F);
+    background: -o-linear-gradient(right, #5188e0, #8DC26F);
+    background: linear-gradient(to left, #5188e0, #8DC26F);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;     
 }

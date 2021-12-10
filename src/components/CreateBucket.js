@@ -2,6 +2,7 @@ import {React, useState} from 'react'
 import{Card, Button, CardGroup, Modal, InputGroup, FormControl} from 'react-bootstrap'
 import createBucket from './image/createBucket.png'
 import axios from 'axios'
+import './CreateBucket.css'
 function CreateBucket() {
     
     const [bucketName, setBucketName] = useState(null);
@@ -52,10 +53,12 @@ function CreateBucket() {
 
     return (
         <div>
-             <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={createBucket} />
+             <Card className="create-main-div">
+                        <Card.Img variant="top" src={createBucket} className="create-image"/>
                         <Card.Body>
-                            <Card.Title>Create Bucket</Card.Title>
+                            <Card.Title className="create-title">
+                                <h5>Create Bucket</h5>
+                            </Card.Title>
                             <Card.Text>
                             <InputGroup className="mb-3">
                                 <FormControl
